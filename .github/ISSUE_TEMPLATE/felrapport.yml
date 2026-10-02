@@ -1,0 +1,83 @@
+name: Felrapport
+description: Något fungerar inte, visar fel siffror eller kraschar.
+title: "[Fel] "
+labels: ["fel"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Tack för att du rapporterar! **Bifoga aldrig din riktiga bokföring, kvitton, kontoutdrag, personnummer,
+        lösenord eller serveradresser** — ärendet kan läsas av andra. Använd påhittade uppgifter i skärmbilder och
+        provfiler. En säkerhetsbrist rapporteras privat enligt SECURITY.md, inte här.
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: Står under Hjälp → Om BokföraX.
+      placeholder: "4.2.0"
+    validations:
+      required: true
+  - type: dropdown
+    id: variant
+    attributes:
+      label: Installation
+      options:
+        - Installerad (installationsprogrammet)
+        - Portabel (ZIP-filen)
+        - Byggd från källkoden
+    validations:
+      required: true
+  - type: dropdown
+    id: lage
+    attributes:
+      label: Läge
+      description: Står under Inställningar → Databas.
+      options:
+        - Lokal (bokföringen på datorn)
+        - Server (min egen BokföraX-server)
+    validations:
+      required: true
+  - type: input
+    id: windows
+    attributes:
+      label: Windows-version
+      placeholder: "Windows 11 23H2"
+  - type: textarea
+    id: steg
+    attributes:
+      label: Vad gjorde du?
+      description: Steg för steg, så att felet går att upprepa.
+      placeholder: |
+        1. Öppna Inkorg
+        2. Välj ett kvitto
+        3. Tryck Enter
+    validations:
+      required: true
+  - type: textarea
+    id: forvantat
+    attributes:
+      label: Vad väntade du dig?
+    validations:
+      required: true
+  - type: textarea
+    id: faktiskt
+    attributes:
+      label: Vad hände i stället?
+      description: Skriv av felmeddelandet ordagrant om det fanns ett.
+    validations:
+      required: true
+  - type: textarea
+    id: bilagor
+    attributes:
+      label: Skärmbilder och felrapport
+      description: |
+        Dra in skärmbilder här — bara med påhittade uppgifter. Visades "Något gick fel": bifoga filen fel-….txt från
+        Hjälp → Öppna loggmappen efter att du har läst igenom den och tagit bort ditt användarnamn, bolagsnamn och
+        serveradresser. Bifoga aldrig bokforing.db, säkerhetskopior eller riktiga kvitton.
+  - type: checkboxes
+    id: integritet
+    attributes:
+      label: Inga riktiga uppgifter
+      options:
+        - label: Jag har kontrollerat att ärendet inte innehåller riktig bokföring, kvitton, personnummer, lösenord eller andra personuppgifter.
+          required: true

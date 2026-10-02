@@ -1,0 +1,40 @@
+name: Förslag
+description: En idé, något som saknas eller något som är krångligt.
+title: "[Förslag] "
+labels: ["förslag"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Tack för idén! Genom att skicka ett förslag godkänner du att det får användas fritt i BokföraX (se
+        FEEDBACK.md). **Skriv inga riktiga uppgifter** om din verksamhet — använd påhittade exempel.
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: Står under Hjälp → Om BokföraX.
+      placeholder: "4.2.0"
+  - type: textarea
+    id: problem
+    attributes:
+      label: Vad vill du kunna göra?
+      description: Beskriv behovet eller det som är krångligt i dag — gärna med ett påhittat exempel.
+    validations:
+      required: true
+  - type: textarea
+    id: forslag
+    attributes:
+      label: Hur skulle det kunna fungera?
+      description: Ditt förslag på lösning, om du har ett.
+  - type: textarea
+    id: regler
+    attributes:
+      label: Regler som gäller
+      description: Gäller det en svensk regel (BFL, moms, Skatteverkets blanketter eller filformat)? Ange gärna paragraf eller länk.
+  - type: checkboxes
+    id: integritet
+    attributes:
+      label: Inga riktiga uppgifter
+      options:
+        - label: Jag har kontrollerat att förslaget inte innehåller riktig bokföring, personnummer eller andra personuppgifter.
+          required: true

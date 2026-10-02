@@ -1,0 +1,9 @@
+# Tomma ärenden är avstängda: alla använder mallarna Felrapport eller Förslag.
+blank_issues_enabled: false
+contact_links:
+  - name: Säkerhetsbrist — rapportera privat
+    url: https://github.com/exxel-sudo/bokforax/security/policy
+    about: Skriv aldrig om en säkerhetsbrist i ett öppet ärende. Följ SECURITY.md (privat rapport eller e-post).
+  - name: Hur man ger synpunkter
+    url: https://github.com/exxel-sudo/bokforax/blob/HEAD/FEEDBACK.md
+    about: Vad en felrapport ska innehålla och varför du aldrig ska bifoga riktig bokföring.
