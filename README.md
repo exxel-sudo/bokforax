@@ -33,6 +33,7 @@ alla rutor, SIE 4 och filerna till Skatteverket.
 Bokföringen sparas **på din egen dator**. Ingenting skickas till BokföraX:s utvecklare — inga konton, ingen molntjänst,
 ingen spårning. Det enda programmet hämtar själv från nätet är valutakurser (Riksbanken/ECB). Ta gärna säkerhetskopior
 till ett USB-minne under **Inställningar → Säkerhetskopiering**.
+Hela integritetspolicyn: [INTEGRITET.md](INTEGRITET.md).
 
 ## Kan jag lita på programmet?
 
