@@ -76,7 +76,8 @@ lämnar testfasen). Därför känner Windows inte igen utgivaren och varnar. Kli
   filen är byggd. Sådana falsklarm är vanliga för nya installationsprogram som inte är kodsignerade ännu.
   VirusTotal körde också filen i en provmiljö (CAPE Sandbox): **inga misstänkta beteenden och ingen nätverkstrafik** —
   den packar bara upp sina egna installationsfiler. De 100 programfiler som ingår (bland annat Microsofts .NET-filer)
-  har 0 träffar.
+  har 0 träffar. Utvecklarens kommentar om filen finns under
+  [Community på VirusTotal](https://www.virustotal.com/gui/file/f5d04367fe20d6c4db36db44d3642eabdf22b3724f14cd68e2bab76f5f8ca04e/community).
 - **Att filen är oförändrad:** kör i PowerShell `Get-FileHash .\BokforaX-Setup-4.2.0.exe` — svaret ska vara
   `F5D04367FE20D6C4DB36DB44D3642EABDF22B3724F14CD68E2BAB76F5F8CA04E` (står också under Releases).
 - **Hämta bara härifrån.** BokföraX sprids inte någon annanstans.
