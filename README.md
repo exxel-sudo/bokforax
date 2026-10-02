@@ -49,7 +49,7 @@ Säkerhetskopiorna hamnar i samma mapp, och du kan välja en extra plats, till e
 programmet ligger bokföringen kvar.
 
 **Skannad efter virus.** Varje installationsfil skannas med Microsoft Defender innan den läggs upp här (4.2.0: inga
-fynd). Se också VirusTotal och kontrollsumman nedan.
+fynd) och kontrolleras på VirusTotal (4.2.0: 51 av 52 rena, ett maskininlärningsfalsklarm — se nedan).
 
 **Säkerhetsgranskad.** Programmet har granskats av flera oberoende granskningar med fokus på säkerhet (inloggningar,
 filer, nätverk) inför testversionen. Alla allvarliga och medelallvarliga fynd är rättade. Hittar du en brist:
@@ -70,9 +70,10 @@ lämnar testfasen). Därför känner Windows inte igen utgivaren och varnar. Kli
 
 - **Antivirus:** installationsfilen för 4.2.0 är skannad med Microsoft Defender (virusdefinitioner 1.459.518.0) utan
   fynd. Du kan själv högerklicka på filen → **Skanna med Microsoft Defender**.
-- **VirusTotal** (ett 70-tal antivirusprogram på en gång):
-  [resultatet för 4.2.0](https://www.virustotal.com/gui/file/f5d04367fe20d6c4db36db44d3642eabdf22b3724f14cd68e2bab76f5f8ca04e). Står det att filen inte är skannad kan du
-  ladda upp den själv på [virustotal.com](https://www.virustotal.com).
+- **VirusTotal** (ett 50-tal antivirusprogram på en gång): **51 av 52 hittar ingenting** —
+  [se resultatet för 4.2.0](https://www.virustotal.com/gui/file/f5d04367fe20d6c4db36db44d3642eabdf22b3724f14cd68e2bab76f5f8ca04e). Ett enda program (Trapmine) ger en
+  maskininlärningsgissning, *"Malicious.moderate.ml.score"* — ingen känd virussignatur, utan en gissning utifrån hur
+  filen är byggd. Sådana falsklarm är vanliga för nya installationsprogram som inte är kodsignerade ännu.
 - **Att filen är oförändrad:** kör i PowerShell `Get-FileHash .\BokforaX-Setup-4.2.0.exe` — svaret ska vara
   `F5D04367FE20D6C4DB36DB44D3642EABDF22B3724F14CD68E2BAB76F5F8CA04E` (står också under Releases).
 - **Hämta bara härifrån.** BokföraX sprids inte någon annanstans.
