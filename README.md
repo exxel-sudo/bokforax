@@ -34,6 +34,33 @@ Bokföringen sparas **på din egen dator**. Ingenting skickas till BokföraX:s u
 ingen spårning. Det enda programmet hämtar själv från nätet är valutakurser (Riksbanken/ECB). Ta gärna säkerhetskopior
 till ett USB-minne under **Inställningar → Säkerhetskopiering**.
 
+## Kan jag lita på programmet?
+
+Källkoden är inte publik, så här är det du behöver veta — och hur du själv kan kontrollera det.
+
+**Vad BokföraX gör med nätet.** Programmet kontaktar självt bara två adresser: **Riksbanken** (`api.riksbank.se`) och
+**Europeiska centralbanken** (`data-api.ecb.europa.eu`) för valutakurser. Inget annat — ingen inloggning, inget konto,
+ingen statistik eller spårning, ingen uppdateringskoll som skickar uppgifter. Två saker sker bara om **du själv** ställer
+in dem: att skicka fakturor med **din** e-post, och att koppla till en **egen** server.
+*Kontrollera själv:* koppla bort datorn från internet — BokföraX fungerar fullt ut, bara utan nya valutakurser.
+
+**Var dina uppgifter ligger.** Allt sparas på din dator i `%AppData%\BokforaPro` (namnet från tiden före BokföraX).
+Säkerhetskopiorna hamnar i samma mapp, och du kan välja en extra plats, till exempel ett USB-minne. Avinstallerar du
+programmet ligger bokföringen kvar.
+
+**Skannad efter virus.** Varje installationsfil skannas med Microsoft Defender innan den läggs upp här (4.2.0: inga
+fynd). Se också VirusTotal och kontrollsumman nedan.
+
+**Säkerhetsgranskad.** Programmet har granskats av flera oberoende granskningar med fokus på säkerhet (inloggningar,
+filer, nätverk) inför testversionen. Alla allvarliga och medelallvarliga fynd är rättade. Hittar du en brist:
+rapportera privat enligt [SECURITY.md](SECURITY.md).
+
+**Testat.** Varje version testas automatiskt med över 2 000 tester (moms, bokföring, SIE, filer, säkerhet) innan den
+släpps, och startas på riktigt innan installationsfilen byggs.
+
+**Vem står bakom.** BokföraX utvecklas av en privatperson i Sverige, Nader, som själv använder programmet för sin
+bokföring. Frågor och synpunkter tas emot under [Issues](../../issues).
+
 ## Bra att veta innan du installerar
 
 **"Windows skyddade datorn"** — testversionen är inte kodsignerad ännu (ett signeringscertifikat köps när programmet
