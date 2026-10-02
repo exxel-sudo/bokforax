@@ -34,11 +34,30 @@ Bokföringen sparas **på din egen dator**. Ingenting skickas till BokföraX:s u
 ingen spårning. Det enda programmet hämtar själv från nätet är valutakurser (Riksbanken/ECB). Ta gärna säkerhetskopior
 till ett USB-minne under **Inställningar → Säkerhetskopiering**.
 
+## Bra att veta innan du installerar
+
+**"Windows skyddade datorn"** — testversionen är inte kodsignerad ännu (ett signeringscertifikat köps när programmet
+lämnar testfasen). Därför känner Windows inte igen utgivaren och varnar. Klicka **Mer info → Kör ändå**.
+
+**Är filen säker?** Det är förståeligt att vara försiktig med en .exe-fil från nätet. Så här kan du kontrollera den:
+
+- **Antivirus:** installationsfilen för 4.2.0 är skannad med Microsoft Defender (virusdefinitioner 1.459.518.0) utan
+  fynd. Du kan själv högerklicka på filen → **Skanna med Microsoft Defender**.
+- **VirusTotal** (ett 70-tal antivirusprogram på en gång):
+  [resultatet för 4.2.0](https://www.virustotal.com/gui/file/f5d04367fe20d6c4db36db44d3642eabdf22b3724f14cd68e2bab76f5f8ca04e). Står det att filen inte är skannad kan du
+  ladda upp den själv på [virustotal.com](https://www.virustotal.com).
+- **Att filen är oförändrad:** kör i PowerShell `Get-FileHash .\BokforaX-Setup-4.2.0.exe` — svaret ska vara
+  `F5D04367FE20D6C4DB36DB44D3642EABDF22B3724F14CD68E2BAB76F5F8CA04E` (står också under Releases).
+- **Hämta bara härifrån.** BokföraX sprids inte någon annanstans.
+
+**Inget demoläge ännu.** Det finns inget färdigt påhittat företag att prova med. Vill du testa utan dina riktiga
+uppgifter: hitta på ett företag i välkomstguiden (till exempel "Testfirma") och mata in några påhittade kvitton och
+fakturor. Ett demoläge kommer i en senare version.
+
 ## Installera
 
 1. Gå till **[Releases](../../releases/latest)** och ladda ner `BokforaX-Setup-<version>.exe`.
-2. Kör filen. Windows kan visa **"Windows skyddade datorn"** eftersom testversionen inte är kodsignerad ännu — klicka
-   **Mer info → Kör ändå**.
+2. Kör filen. Visar Windows **"Windows skyddade datorn"**: klicka **Mer info → Kör ändå** (se ovan).
 3. Följ installationen. Första gången frågar en kort guide vad som gäller för dig (enskild firma eller aktiebolag,
    moms, vad du gör).
 
