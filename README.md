@@ -74,8 +74,9 @@ bokföring. Frågor och synpunkter tas emot under [Issues](../../issues).
 
 ## Bra att veta innan du installerar
 
-**"Windows skyddade datorn"** — testversionen är inte kodsignerad ännu (ett signeringscertifikat köps när programmet
-lämnar testfasen). Därför känner Windows inte igen utgivaren och varnar. Klicka **Mer info → Kör ändå**.
+**"Windows skyddade datorn"** — installationsfilen på GitHub är inte kodsignerad. Därför känner Windows inte igen
+utgivaren och varnar. Klicka **Mer info → Kör ändå**, eller installera från **Microsoft Store** (se *Installera*), där
+varningen inte visas.
 
 **Är filen säker?** Det är förståeligt att vara försiktig med en .exe-fil från nätet. Så här kan du kontrollera den:
 
@@ -99,15 +100,28 @@ fakturor. Ett demoläge kommer i en senare version.
 
 ## Installera
 
+### Från Microsoft Store (rekommenderas)
+
+**[BokföraX i Microsoft Store](https://apps.microsoft.com/detail/9PD1DB9QQFGM)**: klicka **Hämta**, så installeras
+BokföraX och uppdateras sedan av sig själv. Ingen varning från Windows, eftersom Microsoft har kontrollerat och signerat
+programmet.
+
+> BokföraX granskas just nu av Microsoft (inskickad 3 oktober 2026, brukar ta 1–3 dagar). Länken fungerar så fort
+> appen är godkänd. Tills dess: installera från GitHub nedan.
+
+### Från GitHub
+
 1. Gå till **[Releases](../../releases/latest)** och ladda ner `BokforaX-Setup-<version>.exe`.
 2. Kör filen. Visar Windows **"Windows skyddade datorn"**: klicka **Mer info → Kör ändå** (se ovan).
 3. Följ installationen. Första gången frågar en kort guide vad som gäller för dig (enskild firma eller aktiebolag,
    moms, vad du gör).
 
+Installera bara på ett av sätten. Store-versionen och GitHub-versionen är samma program.
+
 **Krav:** Windows 10 eller 11 (64-bitars). Inget annat behöver installeras.
 
-**iPhone-appen** (fota kvitton, översikt i mobilen) ska komma via **App Store** — den finns inte där ännu. Just nu kan
-bara Windows-programmet testas.
+**iPhone-appen BokföraX Mobil** (fota kvitton, översikt, godkänna i mobilen) granskas just nu av Apple. Länken till
+App Store kommer här så fort den är godkänd. Tills dess kan bara Windows-programmet testas.
 
 ## Synpunkter och felrapporter
 
