@@ -106,9 +106,6 @@ fakturor. Ett demoläge kommer i en senare version.
 BokföraX och uppdateras sedan av sig själv. Ingen varning från Windows, eftersom Microsoft har kontrollerat och signerat
 programmet.
 
-> BokföraX granskas just nu av Microsoft (inskickad 3 oktober 2026, brukar ta 1–3 dagar). Länken fungerar så fort
-> appen är godkänd. Tills dess: installera från GitHub nedan.
-
 ### Från GitHub
 
 1. Gå till **[Releases](../../releases/latest)** och ladda ner `BokforaX-Setup-<version>.exe`.
