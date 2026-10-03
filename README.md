@@ -19,7 +19,14 @@ alla rutor, SIE 4 och filerna till Skatteverket.
 - **Fakturor** — kundfakturor med egen logotyp, kreditfakturor, leverantörsfakturor och betalningar.
 - **Affiliate och e-handel** — Amazon Associates (utbetalningar per marknadsplats, valutakurser från Riksbanken) och
   import från Shopify, Stripe och PayPal.
-- **Deklaration och bokslut** — NE-bilaga, SRU-filer, skatteuppskattning, bokslut och SIE 4-export till din revisor.
+- **Deklaration och bokslut** — NE, INK2, INK3 och INK4 med SRU-filer, K10, bokslut med periodiseringsfond och
+  överavskrivningar, årsredovisning enligt K2 eller K3, och SIE 4-export till din revisor.
+- **Lön** — Skatteverkets skattetabeller, arbetsgivardeklaration (AGI), semester, sjuklön, förmåner, traktamente,
+  kollektivavtal och lönebesked.
+- **Automatisering** — bankavstämning, OCR-nummer och avprickning av betalningar, betalfil till banken, påminnelser,
+  återkommande fakturor, offerter och order, lager, budget, e-postinkorg för kvitton, och rapporter från Klarna,
+  Zettle, SumUp, Swish, Etsy och WooCommerce.
+- **Alla bolagsformer** — enskild firma, handels- och kommanditbolag, aktiebolag, ekonomisk och ideell förening.
 - **Säkerhetskopior** — dagliga kopior som kontrolleras, och återställning med ett klick.
 
 | | |
@@ -31,7 +38,8 @@ alla rutor, SIE 4 och filerna till Skatteverket.
 ## Dina uppgifter stannar hos dig
 
 Bokföringen sparas **på din egen dator**. Ingenting skickas till BokföraX:s utvecklare — inga konton, ingen molntjänst,
-ingen spårning. Det enda programmet hämtar själv från nätet är valutakurser (Riksbanken/ECB). Ta gärna säkerhetskopior
+ingen spårning. Det enda programmet hämtar själv från nätet är valutakurser (Riksbanken/ECB). Allt annat sker bara
+om du själv ställer in det. Ta gärna säkerhetskopior
 till ett USB-minne under **Inställningar → Säkerhetskopiering**.
 Hela integritetspolicyn: [INTEGRITET.md](INTEGRITET.md).
 
@@ -41,16 +49,18 @@ Källkoden är inte publik, så här är det du behöver veta — och hur du sj�
 
 **Vad BokföraX gör med nätet.** Programmet kontaktar självt bara två adresser: **Riksbanken** (`api.riksbank.se`) och
 **Europeiska centralbanken** (`data-api.ecb.europa.eu`) för valutakurser. Inget annat — ingen inloggning, inget konto,
-ingen statistik eller spårning, ingen uppdateringskoll som skickar uppgifter. Två saker sker bara om **du själv** ställer
-in dem: att skicka fakturor med **din** e-post, och att koppla till en **egen** server.
+ingen statistik eller spårning, ingen uppdateringskoll som skickar uppgifter. Det här sker bara om **du själv** ställer
+in det: att skicka fakturor med **din** e-post, att hämta kvitton från **din** e-postinkorg, att koppla till en **egen**
+server, webhooks till adresser **du** anger, och AI-assistenten (avstängd från början) som använder Claude från
+Anthropic med **din egen** API-nyckel.
 *Kontrollera själv:* koppla bort datorn från internet — BokföraX fungerar fullt ut, bara utan nya valutakurser.
 
 **Var dina uppgifter ligger.** Allt sparas på din dator i `%AppData%\BokforaPro` (namnet från tiden före BokföraX).
 Säkerhetskopiorna hamnar i samma mapp, och du kan välja en extra plats, till exempel ett USB-minne. Avinstallerar du
 programmet ligger bokföringen kvar.
 
-**Skannad efter virus.** Varje installationsfil skannas med Microsoft Defender innan den läggs upp här (4.2.0: inga
-fynd) och kontrolleras på VirusTotal (4.2.0: 51 av 52 rena, ett maskininlärningsfalsklarm — se nedan).
+**Skannad efter virus.** Varje installationsfil skannas med Microsoft Defender innan den läggs upp här (4.3.0: inga
+fynd). 4.2.0 kontrollerades också på VirusTotal (51 av 52 rena, ett maskininlärningsfalsklarm — se nedan).
 
 **Säkerhetsgranskad.** Programmet har granskats av flera oberoende granskningar med fokus på säkerhet (inloggningar,
 filer, nätverk) inför testversionen. Alla allvarliga och medelallvarliga fynd är rättade. Hittar du en brist:
@@ -69,7 +79,7 @@ lämnar testfasen). Därför känner Windows inte igen utgivaren och varnar. Kli
 
 **Är filen säker?** Det är förståeligt att vara försiktig med en .exe-fil från nätet. Så här kan du kontrollera den:
 
-- **Antivirus:** installationsfilen för 4.2.0 är skannad med Microsoft Defender (virusdefinitioner 1.459.518.0) utan
+- **Antivirus:** installationsfilen för 4.3.0 är skannad med Microsoft Defender (virusdefinitioner 1.459.536.0) utan
   fynd. Du kan själv högerklicka på filen → **Skanna med Microsoft Defender**.
 - **VirusTotal** (ett 50-tal antivirusprogram på en gång): **51 av 52 hittar ingenting** —
   [se resultatet för 4.2.0](https://www.virustotal.com/gui/file/f5d04367fe20d6c4db36db44d3642eabdf22b3724f14cd68e2bab76f5f8ca04e). Ett enda program (Trapmine) ger en
@@ -79,8 +89,8 @@ lämnar testfasen). Därför känner Windows inte igen utgivaren och varnar. Kli
   den packar bara upp sina egna installationsfiler. De 100 programfiler som ingår (bland annat Microsofts .NET-filer)
   har 0 träffar. Utvecklarens kommentar om filen finns under
   [Community på VirusTotal](https://www.virustotal.com/gui/file/f5d04367fe20d6c4db36db44d3642eabdf22b3724f14cd68e2bab76f5f8ca04e/community).
-- **Att filen är oförändrad:** kör i PowerShell `Get-FileHash .\BokforaX-Setup-4.2.0.exe` — svaret ska vara
-  `F5D04367FE20D6C4DB36DB44D3642EABDF22B3724F14CD68E2BAB76F5F8CA04E` (står också under Releases).
+- **Att filen är oförändrad:** kör i PowerShell `Get-FileHash .\BokforaX-Setup-4.3.0.exe` — svaret ska vara
+  `E89DCB1A5417D549C747B26FA30A1C030E7036818F5576AABF200728995A584B` (står också under Releases).
 - **Hämta bara härifrån.** BokföraX sprids inte någon annanstans.
 
 **Inget demoläge ännu.** Det finns inget färdigt påhittat företag att prova med. Vill du testa utan dina riktiga

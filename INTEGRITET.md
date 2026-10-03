@@ -1,6 +1,6 @@
 # Integritetspolicy för BokföraX
 
-*Gäller BokföraX för Windows och BokföraX Mobil för iPhone. Senast ändrad 2026-10-02.*
+*Gäller BokföraX för Windows och BokföraX Mobil för iPhone. Senast ändrad 2026-10-03.*
 
 ## Kortfattat
 
@@ -21,7 +21,13 @@ någon statistik om hur du använder programmen. Det finns inget konto att skapa
 
 - **Windows-programmet** hämtar valutakurser från Sveriges Riksbank (`api.riksbank.se`) och Europeiska centralbanken
   (`data-api.ecb.europa.eu`). Inga uppgifter om dig eller din bokföring skickas med.
-- **E-post:** om du själv ställer in din e-post skickas fakturor via **din** e-postleverantör till de mottagare du väljer.
+- **E-post:** om du själv ställer in din e-post skickas fakturor via **din** e-postleverantör till de mottagare du väljer,
+  och kvitton hämtas från den e-postmapp du anger.
+- **Webhooks och API-nycklar:** om du själv lägger upp dem skickas händelser i bokföringen till de adresser du anger,
+  och de tjänster du ger en nyckel kan läsa och bokföra enligt den behörighet du väljer.
+- **AI-assistenten** är avstängd från början. Slår du på den skickas din fråga (med bolagsform och momsstatus), eller
+  texten från ett kvitto du väljer att tolka, till Anthropic (Claude) med **din egen** API-nyckel. Anthropics villkor
+  gäller för det. Hela bokföringen skickas aldrig.
 - **iPhone-appen** kontaktar bara din dator eller din server.
 
 ## Behörigheter i iPhone-appen
