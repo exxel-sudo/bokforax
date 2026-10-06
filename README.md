@@ -117,8 +117,12 @@ Installera bara på ett av sätten. Store-versionen och GitHub-versionen är sam
 
 **Krav:** Windows 10 eller 11 (64-bitars). Inget annat behöver installeras.
 
-**iPhone-appen BokföraX Mobil** (fota kvitton, översikt, godkänna i mobilen) granskas just nu av Apple. Länken till
-App Store kommer här så fort den är godkänd. Tills dess kan bara Windows-programmet testas.
+### iPhone-appen
+
+**[BokföraX i App Store](https://apps.apple.com/app/bokf%C3%B6rax/id6818613018)**: fota kvitton, se översikten och
+godkänn i mobilen. Appen kopplas till BokföraX på din dator (eller till en egen BokföraX-server) med en engångskod
+under **Inställningar → Mobilkoppling** i Windows-programmet. Vill du bara titta först: tryck **Prova med demodata**
+i appen, så visas ett påhittat företag utan koppling. **Krav:** iPhone med iOS 26 eller senare.
 
 ## Synpunkter och felrapporter
 
