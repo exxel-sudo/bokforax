@@ -32,7 +32,7 @@ villkoren lättare att förstå. Säger sammanfattningen något annat än licens
 - **Synpunkter** som du skickar får användas fritt i BokföraX. Källkoden är inte publik och kodbidrag tas inte emot.
 - **Tredjepartskomponenter.** Licensen gäller BokföraX:s egen kod. .NET, SQLite, QuestPDF, PdfPig,
   CommunityToolkit.Mvvm, QRCoder och andra bibliotek har sina egna licenser.
-- **iPhone-appen.** BokföraX Mobil distribueras via [App Store](https://apps.apple.com/app/bokf%C3%B6rax/id6818613018). För appen gäller också Apples
+- **iPhone-appen.** BokföraX Mobil distribueras via [App Store](https://apps.apple.com/se/app/bokf%C3%B6rax/id6818613018). För appen gäller också Apples
   villkor för appar i App Store.
 - **Dina uppgifter.** Licensen säger inget om dina data. Tekniskt gäller: bokföringen ligger på din dator (eller på din
   egen server om du själv kopplar dit den), och ingenting skickas till BokföraX:s utvecklare.

@@ -119,7 +119,7 @@ Installera bara på ett av sätten. Store-versionen och GitHub-versionen är sam
 
 ### iPhone-appen
 
-**[BokföraX i App Store](https://apps.apple.com/app/bokf%C3%B6rax/id6818613018)**: fota kvitton, se översikten och
+**[BokföraX i App Store](https://apps.apple.com/se/app/bokf%C3%B6rax/id6818613018)**: fota kvitton, se översikten och
 godkänn i mobilen. Appen kopplas till BokföraX på din dator (eller till en egen BokföraX-server) med en engångskod
 under **Inställningar → Mobilkoppling** i Windows-programmet. Vill du bara titta först: tryck **Prova med demodata**
 i appen, så visas ett påhittat företag utan koppling. **Krav:** iPhone med iOS 26 eller senare.
