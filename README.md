@@ -1,10 +1,11 @@
 # BokföraX
 
-**Bokföring för svenska enskilda firmor och små aktiebolag** — webbplats: **[bokforax.se](https://bokforax.se)** — byggd efter svenska regler: bokföringslagen, moms med
-alla rutor, SIE 4 och filerna till Skatteverket.
+**Bokföring för svenska enskilda firmor, aktiebolag, handels- och kommanditbolag och föreningar** — webbplats:
+**[bokforax.se](https://bokforax.se)** — byggd efter svenska regler: bokföringslagen, moms med alla rutor, SIE 4 och
+filerna till Skatteverket.
 
-> **Testversion.** BokföraX är under utveckling och testas nu av fler. Prova gärna och berätta vad som fungerar och vad
-> som inte gör det — se [Synpunkter och felrapporter](#synpunkter-och-felrapporter). Programmets källkod är inte publik.
+> **Gratis.** BokföraX är gratis att använda i den egna verksamheten. Berätta gärna vad som fungerar och vad som kan bli
+> bättre — se [Synpunkter och felrapporter](#synpunkter-och-felrapporter). Programmets källkod är inte publik.
 
 ![Hem](bilder/hem.png)
 
@@ -63,7 +64,7 @@ programmet ligger bokföringen kvar.
 fynd). 4.2.0 kontrollerades också på VirusTotal (51 av 52 rena, ett maskininlärningsfalsklarm — se nedan).
 
 **Säkerhetsgranskad.** Programmet har granskats av flera oberoende granskningar med fokus på säkerhet (inloggningar,
-filer, nätverk) inför testversionen. Alla allvarliga och medelallvarliga fynd är rättade. Hittar du en brist:
+filer, nätverk), senast hela programmet i oktober 2026. Alla allvarliga och medelallvarliga fynd är rättade. Hittar du en brist:
 rapportera privat enligt [SECURITY.md](SECURITY.md).
 
 **Testat.** Varje version testas automatiskt med över 2 000 tester (moms, bokföring, SIE, filer, säkerhet) innan den
