@@ -57,17 +57,18 @@ Anthropic eller ChatGPT från OpenAI med **din egen** API-nyckel.
 *Kontrollera själv:* koppla bort datorn från internet — BokföraX fungerar fullt ut, bara utan nya valutakurser.
 
 **Var dina uppgifter ligger.** Allt sparas på din dator i `%AppData%\BokforaPro` (namnet från tiden före BokföraX).
-Säkerhetskopiorna hamnar i samma mapp, och du kan välja en extra plats, till exempel ett USB-minne. Avinstallerar du
-programmet ligger bokföringen kvar.
+Säkerhetskopiorna hamnar i samma mapp, och du kan välja en extra plats, till exempel ett USB-minne. Med **Molnbackup**
+(från 4.9.0) sparas också daterade, krypterade kopior i din egen Dropbox, Google Drive, OneDrive eller iCloud — själva
+bokföringen ligger kvar på datorn. Avinstallerar du programmet ligger bokföringen kvar.
 
-**Skannad efter virus.** Varje installationsfil skannas med Microsoft Defender innan den läggs upp här (4.6.0: inga
+**Skannad efter virus.** Varje installationsfil skannas med Microsoft Defender innan den läggs upp här (4.9.0: inga
 fynd). 4.2.0 kontrollerades också på VirusTotal (51 av 52 rena, ett maskininlärningsfalsklarm — se nedan).
 
 **Säkerhetsgranskad.** Programmet har granskats av flera oberoende granskningar med fokus på säkerhet (inloggningar,
 filer, nätverk), senast hela programmet i oktober 2026. Alla allvarliga och medelallvarliga fynd är rättade. Hittar du en brist:
 rapportera privat enligt [SECURITY.md](SECURITY.md).
 
-**Testat.** Varje version testas automatiskt med över 2 000 tester (moms, bokföring, SIE, filer, säkerhet) innan den
+**Testat.** Varje version testas automatiskt med över 6 000 tester (moms, bokföring, SIE, filer, säkerhet) innan den
 släpps, och startas på riktigt innan installationsfilen byggs.
 
 **Vem står bakom.** BokföraX utvecklas av en privatperson i Sverige, Nader, som själv använder programmet för sin
@@ -81,7 +82,7 @@ varningen inte visas.
 
 **Är filen säker?** Det är förståeligt att vara försiktig med en .exe-fil från nätet. Så här kan du kontrollera den:
 
-- **Antivirus:** installationsfilen för 4.6.0 är skannad med Microsoft Defender (virusdefinitioner 1.461.61.0) utan
+- **Antivirus:** installationsfilen för 4.9.0 är skannad med Microsoft Defender (virusdefinitioner 1.461.81.0) utan
   fynd. Du kan själv högerklicka på filen → **Skanna med Microsoft Defender**.
 - **VirusTotal** (ett 50-tal antivirusprogram på en gång): **51 av 52 hittar ingenting** —
   [se resultatet för 4.2.0](https://www.virustotal.com/gui/file/f5d04367fe20d6c4db36db44d3642eabdf22b3724f14cd68e2bab76f5f8ca04e). Ett enda program (Trapmine) ger en
@@ -91,13 +92,12 @@ varningen inte visas.
   den packar bara upp sina egna installationsfiler. De 100 programfiler som ingår (bland annat Microsofts .NET-filer)
   har 0 träffar. Utvecklarens kommentar om filen finns under
   [Community på VirusTotal](https://www.virustotal.com/gui/file/f5d04367fe20d6c4db36db44d3642eabdf22b3724f14cd68e2bab76f5f8ca04e/community).
-- **Att filen är oförändrad:** kör i PowerShell `Get-FileHash .\BokforaX-Setup-4.6.0.exe` — svaret ska vara
-  `74E6E47B09DD5ECC5AB18C55B1C693EFFF8B1E0D928E3BF0B463157F0A194823` (står också under Releases).
+- **Att filen är oförändrad:** kör i PowerShell `Get-FileHash .\BokforaX-Setup-4.9.0.exe` — svaret ska vara
+  `8A25F948BD4DECD63DB4E6087D59D96BFE9803BF187F8CA0D1489434DF7A53C2` (står också under Releases).
 - **Hämta bara härifrån.** BokföraX sprids inte någon annanstans.
 
-**Inget demoläge ännu.** Det finns inget färdigt påhittat företag att prova med. Vill du testa utan dina riktiga
-uppgifter: hitta på ett företag i välkomstguiden (till exempel "Testfirma") och mata in några påhittade kvitton och
-fakturor. Ett demoläge kommer i en senare version.
+**Prova först med ett exempelföretag.** **Hjälp → Prova med exempelföretag…** öppnar det påhittade företaget
+*Nordljus Digital* i ett eget fönster. Exemplet ligger i en egen mapp och påverkar aldrig din riktiga bokföring.
 
 ## Installera
 
