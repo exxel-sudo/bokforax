@@ -21,14 +21,17 @@ filerna till Skatteverket.
 - **Affiliate och e-handel** — Amazon Associates (utbetalningar per marknadsplats, valutakurser från Riksbanken) och
   import från Shopify, Stripe och PayPal.
 - **Deklaration och bokslut** — NE, INK2, INK3 och INK4 med SRU-filer, K10, bokslut med periodiseringsfond och
-  överavskrivningar, årsredovisning enligt K2 eller K3, och SIE 4-export till din revisor.
+  överavskrivningar, årsredovisning enligt K2 eller K3 (även för BRF och stiftelse), koncernredovisning och SIE 4-export
+  till din revisor.
 - **Lön** — Skatteverkets skattetabeller, arbetsgivardeklaration (AGI), semester, sjuklön, förmåner, traktamente,
   kollektivavtal och lönebesked.
 - **Automatisering** — bankavstämning, OCR-nummer och avprickning av betalningar, betalfil till banken, påminnelser,
   återkommande fakturor, offerter och order, lager, budget, e-postinkorg för kvitton, och rapporter från Klarna,
   Zettle, SumUp, Swish, Etsy och WooCommerce.
 - **Alla bolagsformer** — enskild firma, handels- och kommanditbolag, aktiebolag, ekonomisk och ideell förening.
-- **Säkerhetskopior** — dagliga kopior som kontrolleras, och återställning med ett klick.
+- **Säkerhetskopior** — dagliga kopior som kontrolleras och kan krypteras, och återställning med ett klick.
+- **Flera bolag och datorer** (från 5.0) — byt mellan bolagen med ett klick, dela bokföringen mellan datorerna på
+  kontoret utan server, och arbeta vidare med kvitton och tidrader när servern inte svarar.
 
 | | |
 |---|---|
@@ -52,8 +55,8 @@ Källkoden är inte publik, så här är det du behöver veta — och hur du sj�
 **Europeiska centralbanken** (`data-api.ecb.europa.eu`) för valutakurser. Inget annat — ingen inloggning, inget konto,
 ingen statistik eller spårning, ingen uppdateringskoll som skickar uppgifter. Det här sker bara om **du själv** ställer
 in det: att skicka fakturor med **din** e-post, att hämta kvitton från **din** e-postinkorg, att koppla till en **egen**
-server, webhooks till adresser **du** anger, och AI-assistenten (avstängd från början) som använder Claude från
-Anthropic eller ChatGPT från OpenAI med **din egen** API-nyckel.
+server eller dela bokföringen med **dina** andra datorer i samma nätverk, webhooks till adresser **du** anger, och
+AI-assistenten (avstängd från början) som använder Claude från Anthropic eller ChatGPT från OpenAI med **din egen** API-nyckel.
 *Kontrollera själv:* koppla bort datorn från internet — BokföraX fungerar fullt ut, bara utan nya valutakurser.
 
 **Var dina uppgifter ligger.** Allt sparas på din dator i `%AppData%\BokforaPro` (namnet från tiden före BokföraX).
@@ -61,7 +64,7 @@ Säkerhetskopiorna hamnar i samma mapp, och du kan välja en extra plats, till e
 (från 4.9.0) sparas också daterade, krypterade kopior i din egen Dropbox, Google Drive, OneDrive eller iCloud — själva
 bokföringen ligger kvar på datorn. Avinstallerar du programmet ligger bokföringen kvar.
 
-**Skannad efter virus.** Varje installationsfil skannas med Microsoft Defender innan den läggs upp här (4.9.0: inga
+**Skannad efter virus.** Varje installationsfil skannas med Microsoft Defender innan den läggs upp här (5.0.0: inga
 fynd). 4.2.0 kontrollerades också på VirusTotal (51 av 52 rena, ett maskininlärningsfalsklarm — se nedan).
 
 **Säkerhetsgranskad.** Programmet har granskats av flera oberoende granskningar med fokus på säkerhet (inloggningar,
@@ -82,7 +85,7 @@ varningen inte visas.
 
 **Är filen säker?** Det är förståeligt att vara försiktig med en .exe-fil från nätet. Så här kan du kontrollera den:
 
-- **Antivirus:** installationsfilen för 4.9.0 är skannad med Microsoft Defender (virusdefinitioner 1.461.81.0) utan
+- **Antivirus:** installationsfilen för 5.0.0 är skannad med Microsoft Defender (virusdefinitioner 1.461.98.0) utan
   fynd. Du kan själv högerklicka på filen → **Skanna med Microsoft Defender**.
 - **VirusTotal** (ett 50-tal antivirusprogram på en gång): **51 av 52 hittar ingenting** —
   [se resultatet för 4.2.0](https://www.virustotal.com/gui/file/f5d04367fe20d6c4db36db44d3642eabdf22b3724f14cd68e2bab76f5f8ca04e). Ett enda program (Trapmine) ger en
@@ -92,8 +95,8 @@ varningen inte visas.
   den packar bara upp sina egna installationsfiler. De 100 programfiler som ingår (bland annat Microsofts .NET-filer)
   har 0 träffar. Utvecklarens kommentar om filen finns under
   [Community på VirusTotal](https://www.virustotal.com/gui/file/f5d04367fe20d6c4db36db44d3642eabdf22b3724f14cd68e2bab76f5f8ca04e/community).
-- **Att filen är oförändrad:** kör i PowerShell `Get-FileHash .\BokforaX-Setup-4.9.0.exe` — svaret ska vara
-  `8A25F948BD4DECD63DB4E6087D59D96BFE9803BF187F8CA0D1489434DF7A53C2` (står också under Releases).
+- **Att filen är oförändrad:** kör i PowerShell `Get-FileHash .\BokforaX-Setup-5.0.0.exe` — svaret ska vara
+  `C04DAA557C992628A8276FF585378A0409427679612637085E6454CD8114E572` (står också under Releases).
 - **Hämta bara härifrån.** BokföraX sprids inte någon annanstans.
 
 **Prova först med ett exempelföretag.** **Hjälp → Prova med exempelföretag…** öppnar det påhittade företaget
