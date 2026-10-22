@@ -59,7 +59,7 @@ server eller dela bokföringen med **dina** andra datorer i samma nätverk, webh
 AI-assistenten (avstängd från början) som använder Claude från Anthropic eller ChatGPT från OpenAI med **din egen** API-nyckel.
 *Kontrollera själv:* koppla bort datorn från internet — BokföraX fungerar fullt ut, bara utan nya valutakurser.
 
-**Var dina uppgifter ligger.** Allt sparas på din dator i `%AppData%BokforaX`.
+**Var dina uppgifter ligger.** Allt sparas på din dator i `%AppData%\BokforaX`.
 Säkerhetskopiorna hamnar i samma mapp, och du kan välja en extra plats, till exempel ett USB-minne. Med **Molnbackup**
 (från 4.9.0) sparas också daterade, krypterade kopior i din egen Dropbox, Google Drive, OneDrive eller iCloud — själva
 bokföringen ligger kvar på datorn. Avinstallerar du programmet ligger bokföringen kvar.
