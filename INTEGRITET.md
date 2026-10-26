@@ -9,8 +9,10 @@ någon statistik om hur du använder programmen. Det finns inget konto att skapa
 
 ## Var dina uppgifter finns
 
-- **Windows-programmet** sparar bokföringen på din egen dator (mappen `%AppData%\BokforaPro`) och, om du själv väljer
-  det, säkerhetskopior på en plats du anger.
+- **Windows-programmet** sparar bokföringen på din egen dator (mappen `%AppData%\BokforaX`; Microsoft Store-versionen
+  från 5.6.0 i `%USERPROFILE%\BokforaX`) och, om du själv väljer det, säkerhetskopior på en plats du anger. Mappen ligger
+  kvar om du avinstallerar programmet, eftersom bokföringslagen kräver att bokföringen sparas i sju år.
+- **Mac-programmet** sparar bokföringen i `~/Library/Application Support/BokforaX` på din Mac.
 - **iPhone-appen** är en följeslagare till Windows-programmet. Kvitton du fotar och översikter du ser går **bara mellan
   telefonen och din egen dator** (i samma nätverk) **eller din egen server** — aldrig till utvecklaren eller någon annan.
   Kopplingens nyckel sparas i iPhones nyckelring. Fotade kvitton som väntar på att skickas ligger kvar i appen tills de

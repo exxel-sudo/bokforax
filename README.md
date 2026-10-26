@@ -59,12 +59,13 @@ server eller dela bokföringen med **dina** andra datorer i samma nätverk, webh
 AI-assistenten (avstängd från början) som använder Claude från Anthropic eller ChatGPT från OpenAI med **din egen** API-nyckel.
 *Kontrollera själv:* koppla bort datorn från internet — BokföraX fungerar fullt ut, bara utan nya valutakurser.
 
-**Var dina uppgifter ligger.** Allt sparas på din dator i `%AppData%\BokforaX`.
+**Var dina uppgifter ligger.** Allt sparas på din dator i `%AppData%\BokforaX` (Microsoft Store-versionen från 5.6.0 i
+`%USERPROFILE%\BokforaX`, på Mac i `~/Library/Application Support/BokforaX`).
 Säkerhetskopiorna hamnar i samma mapp, och du kan välja en extra plats, till exempel ett USB-minne. Med **Molnbackup**
 (från 4.9.0) sparas också daterade, krypterade kopior i din egen Dropbox, Google Drive, OneDrive eller iCloud — själva
 bokföringen ligger kvar på datorn. Avinstallerar du programmet ligger bokföringen kvar.
 
-**Skannad efter virus.** Varje installationsfil skannas med Microsoft Defender innan den läggs upp här (5.5.0: inga
+**Skannad efter virus.** Varje installationsfil skannas med Microsoft Defender innan den läggs upp här (5.6.0: inga
 fynd). 4.2.0 kontrollerades också på VirusTotal (51 av 52 rena, ett maskininlärningsfalsklarm — se nedan).
 
 **Säkerhetsgranskad.** Programmet har granskats av flera oberoende granskningar med fokus på säkerhet (inloggningar,
@@ -85,7 +86,7 @@ varningen inte visas.
 
 **Är filen säker?** Det är förståeligt att vara försiktig med en .exe-fil från nätet. Så här kan du kontrollera den:
 
-- **Antivirus:** installationsfilen för 5.5.0 är skannad med Microsoft Defender (virusdefinitioner 1.461.175.0) utan
+- **Antivirus:** installationsfilen för 5.6.0 är skannad med Microsoft Defender (virusdefinitioner 1.461.208.0) utan
   fynd. Du kan själv högerklicka på filen → **Skanna med Microsoft Defender**.
 - **VirusTotal** (ett 50-tal antivirusprogram på en gång): **51 av 52 hittar ingenting** —
   [se resultatet för 4.2.0](https://www.virustotal.com/gui/file/f5d04367fe20d6c4db36db44d3642eabdf22b3724f14cd68e2bab76f5f8ca04e). Ett enda program (Trapmine) ger en
@@ -95,8 +96,8 @@ varningen inte visas.
   den packar bara upp sina egna installationsfiler. De 100 programfiler som ingår (bland annat Microsofts .NET-filer)
   har 0 träffar. Utvecklarens kommentar om filen finns under
   [Community på VirusTotal](https://www.virustotal.com/gui/file/f5d04367fe20d6c4db36db44d3642eabdf22b3724f14cd68e2bab76f5f8ca04e/community).
-- **Att filen är oförändrad:** kör i PowerShell `Get-FileHash .\BokforaX-Setup-5.5.0.exe` — svaret ska vara
-  `A8AA15AE9ABEFC7DDA0B50CE294E22AF86AA7A5C0F3CECACEBAE755CFA10F885` (står också under Releases).
+- **Att filen är oförändrad:** kör i PowerShell `Get-FileHash .\BokforaX-Setup-5.6.0.exe` — svaret ska vara
+  `BD7CB49523EEFF6B3B50EBB7E3EBC6455D80AAE3C6259A1ECDBB0335834BEE00` (står också under Releases).
 - **Hämta bara härifrån.** BokföraX sprids inte någon annanstans.
 
 **Prova först med ett exempelföretag.** **Hjälp → Prova med exempelföretag…** öppnar det påhittade företaget
@@ -120,6 +121,15 @@ programmet.
 Installera bara på ett av sätten. Store-versionen och GitHub-versionen är samma program.
 
 **Krav:** Windows 10 eller 11 (64-bitars). Inget annat behöver installeras.
+
+### På Mac (från 5.6.0)
+
+1. Gå till **[Releases](../../releases/latest)** och ladda ner `BokforaX-<version>-mac.dmg`.
+2. Öppna filen och dra **BokföraX** till **Program**. Appen är signerad och notariserad av Apple, så macOS öppnar den
+   utan varning.
+3. Har du bokföringen i Windows: **Arkiv → Flytta bokföringen från en annan dator** i Mac-appen.
+
+**Krav:** macOS 14 eller senare, Apple Silicon eller Intel. Mac App Store kommer senare.
 
 ### iPhone-appen
 
