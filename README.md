@@ -32,6 +32,8 @@ filerna till Skatteverket.
 - **Säkerhetskopior** — dagliga kopior som kontrolleras och kan krypteras, och återställning med ett klick.
 - **Flera bolag och datorer** (från 5.0) — byt mellan bolagen med ett klick, dela bokföringen mellan datorerna på
   kontoret utan server, och arbeta vidare med kvitton och tidrader när servern inte svarar.
+- **Nå bokföringen via webben** (från 5.7.0) — öppna bokföringen i en webbläsare med lösenord och engångskod. Avstängt
+  tills du slår på det, och din egen dator eller server är servern: ingenting går via BokföraX.
 
 | | |
 |---|---|
@@ -65,7 +67,7 @@ Säkerhetskopiorna hamnar i samma mapp, och du kan välja en extra plats, till e
 (från 4.9.0) sparas också daterade, krypterade kopior i din egen Dropbox, Google Drive, OneDrive eller iCloud — själva
 bokföringen ligger kvar på datorn. Avinstallerar du programmet ligger bokföringen kvar.
 
-**Skannad efter virus.** Varje installationsfil skannas med Microsoft Defender innan den läggs upp här (5.6.0: inga
+**Skannad efter virus.** Varje installationsfil skannas med Microsoft Defender innan den läggs upp här (5.7.0: inga
 fynd). 4.2.0 kontrollerades också på VirusTotal (51 av 52 rena, ett maskininlärningsfalsklarm — se nedan).
 
 **Säkerhetsgranskad.** Programmet har granskats av flera oberoende granskningar med fokus på säkerhet (inloggningar,
@@ -86,7 +88,7 @@ varningen inte visas.
 
 **Är filen säker?** Det är förståeligt att vara försiktig med en .exe-fil från nätet. Så här kan du kontrollera den:
 
-- **Antivirus:** installationsfilen för 5.6.0 är skannad med Microsoft Defender (virusdefinitioner 1.461.208.0) utan
+- **Antivirus:** installationsfilen för 5.7.0 är skannad med Microsoft Defender (virusdefinitioner 1.461.217.0) utan
   fynd. Du kan själv högerklicka på filen → **Skanna med Microsoft Defender**.
 - **VirusTotal** (ett 50-tal antivirusprogram på en gång): **51 av 52 hittar ingenting** —
   [se resultatet för 4.2.0](https://www.virustotal.com/gui/file/f5d04367fe20d6c4db36db44d3642eabdf22b3724f14cd68e2bab76f5f8ca04e). Ett enda program (Trapmine) ger en
@@ -96,8 +98,8 @@ varningen inte visas.
   den packar bara upp sina egna installationsfiler. De 100 programfiler som ingår (bland annat Microsofts .NET-filer)
   har 0 träffar. Utvecklarens kommentar om filen finns under
   [Community på VirusTotal](https://www.virustotal.com/gui/file/f5d04367fe20d6c4db36db44d3642eabdf22b3724f14cd68e2bab76f5f8ca04e/community).
-- **Att filen är oförändrad:** kör i PowerShell `Get-FileHash .\BokforaX-Setup-5.6.0.exe` — svaret ska vara
-  `BD7CB49523EEFF6B3B50EBB7E3EBC6455D80AAE3C6259A1ECDBB0335834BEE00` (står också under Releases).
+- **Att filen är oförändrad:** kör i PowerShell `Get-FileHash .\BokforaX-Setup-5.7.0.exe` — svaret ska vara
+  `D4567C1183C817E6A48F1EA8BAE98FEA5374381C78741603D49D79ABCBEDC152` (står också under Releases).
 - **Hämta bara härifrån.** BokföraX sprids inte någon annanstans.
 
 **Prova först med ett exempelföretag.** **Hjälp → Prova med exempelföretag…** öppnar det påhittade företaget
@@ -136,7 +138,7 @@ Installera bara på ett av sätten. Store-versionen och GitHub-versionen är sam
 **[BokföraX i App Store](https://apps.apple.com/se/app/bokf%C3%B6rax/id6818613018)**: fota kvitton, se översikten och
 godkänn i mobilen. Appen kopplas till BokföraX på din dator (eller till en egen BokföraX-server) med en engångskod
 under **Inställningar → Mobilkoppling** i Windows-programmet. Vill du bara titta först: tryck **Prova med demodata**
-i appen, så visas ett påhittat företag utan koppling. **Krav:** iPhone med iOS 26 eller senare.
+i appen, så visas ett påhittat företag utan koppling. **Krav:** iPhone med iOS 18 eller senare.
 
 ## Synpunkter och felrapporter
 
