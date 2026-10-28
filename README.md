@@ -67,7 +67,7 @@ Säkerhetskopiorna hamnar i samma mapp, och du kan välja en extra plats, till e
 (från 4.9.0) sparas också daterade, krypterade kopior i din egen Dropbox, Google Drive, OneDrive eller iCloud — själva
 bokföringen ligger kvar på datorn. Avinstallerar du programmet ligger bokföringen kvar.
 
-**Skannad efter virus.** Varje installationsfil skannas med Microsoft Defender innan den läggs upp här (5.8.0: inga
+**Skannad efter virus.** Varje installationsfil skannas med Microsoft Defender innan den läggs upp här (5.9.0: inga
 fynd). 4.2.0 kontrollerades också på VirusTotal (51 av 52 rena, ett maskininlärningsfalsklarm — se nedan).
 
 **Säkerhetsgranskad.** Programmet har granskats av flera oberoende granskningar med fokus på säkerhet (inloggningar,
@@ -88,7 +88,7 @@ varningen inte visas.
 
 **Är filen säker?** Det är förståeligt att vara försiktig med en .exe-fil från nätet. Så här kan du kontrollera den:
 
-- **Antivirus:** installationsfilen för 5.8.0 är skannad med Microsoft Defender (virusdefinitioner 1.463.1.0) utan
+- **Antivirus:** installationsfilen för 5.9.0 är skannad med Microsoft Defender (virusdefinitioner 1.463.1.0) utan
   fynd. Du kan själv högerklicka på filen → **Skanna med Microsoft Defender**.
 - **VirusTotal** (ett 50-tal antivirusprogram på en gång): **51 av 52 hittar ingenting** —
   [se resultatet för 4.2.0](https://www.virustotal.com/gui/file/f5d04367fe20d6c4db36db44d3642eabdf22b3724f14cd68e2bab76f5f8ca04e). Ett enda program (Trapmine) ger en
@@ -98,8 +98,8 @@ varningen inte visas.
   den packar bara upp sina egna installationsfiler. De 100 programfiler som ingår (bland annat Microsofts .NET-filer)
   har 0 träffar. Utvecklarens kommentar om filen finns under
   [Community på VirusTotal](https://www.virustotal.com/gui/file/f5d04367fe20d6c4db36db44d3642eabdf22b3724f14cd68e2bab76f5f8ca04e/community).
-- **Att filen är oförändrad:** kör i PowerShell `Get-FileHash .\BokforaX-Setup-5.8.0.exe` — svaret ska vara
-  `C501DB5A860B10CB752E2809373059FCB0BB8DFDEFEF2C675CE0896785E17D12` (står också under Releases).
+- **Att filen är oförändrad:** kör i PowerShell `Get-FileHash .\BokforaX-Setup-5.9.0.exe` — svaret ska vara
+  `FD7DEE1A03EBBCA78D83F26D09ECCBD820328B5B246B6B54383A49E779CCE988` (står också under Releases).
 - **Hämta bara härifrån.** BokföraX sprids inte någon annanstans.
 
 **Prova först med ett exempelföretag.** **Hjälp → Prova med exempelföretag…** öppnar det påhittade företaget
