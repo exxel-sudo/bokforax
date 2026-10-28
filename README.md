@@ -58,7 +58,7 @@ Källkoden är inte publik, så här är det du behöver veta — och hur du sj�
 ingen statistik eller spårning, ingen uppdateringskoll som skickar uppgifter. Det här sker bara om **du själv** ställer
 in det: att skicka fakturor med **din** e-post, att hämta kvitton från **din** e-postinkorg, att koppla till en **egen**
 server eller dela bokföringen med **dina** andra datorer i samma nätverk, webhooks till adresser **du** anger, och
-AI-assistenten (avstängd från början) som använder Claude från Anthropic eller ChatGPT från OpenAI med **din egen** API-nyckel.
+AI-assistenten (avstängd från början) som använder Claude från Anthropic eller ChatGPT från OpenAI med **din egen** API-nyckel — eller AI på datorn (Apple Intelligence på Mac eller en lokal modell), som inte skickar något.
 *Kontrollera själv:* koppla bort datorn från internet — BokföraX fungerar fullt ut, bara utan nya valutakurser.
 
 **Var dina uppgifter ligger.** Allt sparas på din dator i `%AppData%\BokforaX` (Microsoft Store-versionen från 5.6.0 i
@@ -67,7 +67,7 @@ Säkerhetskopiorna hamnar i samma mapp, och du kan välja en extra plats, till e
 (från 4.9.0) sparas också daterade, krypterade kopior i din egen Dropbox, Google Drive, OneDrive eller iCloud — själva
 bokföringen ligger kvar på datorn. Avinstallerar du programmet ligger bokföringen kvar.
 
-**Skannad efter virus.** Varje installationsfil skannas med Microsoft Defender innan den läggs upp här (5.7.0: inga
+**Skannad efter virus.** Varje installationsfil skannas med Microsoft Defender innan den läggs upp här (5.8.0: inga
 fynd). 4.2.0 kontrollerades också på VirusTotal (51 av 52 rena, ett maskininlärningsfalsklarm — se nedan).
 
 **Säkerhetsgranskad.** Programmet har granskats av flera oberoende granskningar med fokus på säkerhet (inloggningar,
@@ -88,7 +88,7 @@ varningen inte visas.
 
 **Är filen säker?** Det är förståeligt att vara försiktig med en .exe-fil från nätet. Så här kan du kontrollera den:
 
-- **Antivirus:** installationsfilen för 5.7.0 är skannad med Microsoft Defender (virusdefinitioner 1.461.217.0) utan
+- **Antivirus:** installationsfilen för 5.8.0 är skannad med Microsoft Defender (virusdefinitioner 1.463.1.0) utan
   fynd. Du kan själv högerklicka på filen → **Skanna med Microsoft Defender**.
 - **VirusTotal** (ett 50-tal antivirusprogram på en gång): **51 av 52 hittar ingenting** —
   [se resultatet för 4.2.0](https://www.virustotal.com/gui/file/f5d04367fe20d6c4db36db44d3642eabdf22b3724f14cd68e2bab76f5f8ca04e). Ett enda program (Trapmine) ger en
@@ -98,8 +98,8 @@ varningen inte visas.
   den packar bara upp sina egna installationsfiler. De 100 programfiler som ingår (bland annat Microsofts .NET-filer)
   har 0 träffar. Utvecklarens kommentar om filen finns under
   [Community på VirusTotal](https://www.virustotal.com/gui/file/f5d04367fe20d6c4db36db44d3642eabdf22b3724f14cd68e2bab76f5f8ca04e/community).
-- **Att filen är oförändrad:** kör i PowerShell `Get-FileHash .\BokforaX-Setup-5.7.0.exe` — svaret ska vara
-  `D4567C1183C817E6A48F1EA8BAE98FEA5374381C78741603D49D79ABCBEDC152` (står också under Releases).
+- **Att filen är oförändrad:** kör i PowerShell `Get-FileHash .\BokforaX-Setup-5.8.0.exe` — svaret ska vara
+  `C501DB5A860B10CB752E2809373059FCB0BB8DFDEFEF2C675CE0896785E17D12` (står också under Releases).
 - **Hämta bara härifrån.** BokföraX sprids inte någon annanstans.
 
 **Prova först med ett exempelföretag.** **Hjälp → Prova med exempelföretag…** öppnar det påhittade företaget
