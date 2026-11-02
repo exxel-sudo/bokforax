@@ -122,6 +122,24 @@ programmet.
 
 Installera bara på ett av sätten. Store-versionen och GitHub-versionen är samma program.
 
+### Rättningar kommer först här på GitHub
+
+När ett fel rättas läggs den nya versionen upp här på GitHub samma dag – installationsfilen för Windows och .dmg-filen för
+Mac. Microsoft Store och Apples App Store måste granska och godkänna varje ny version innan den kommer ut där, och det brukar
+ta från någon dag upp till en vecka. Samma rättning kommer alltså till Store-versionerna, men några dagar senare.
+
+- **Vill du alltid ha rättningarna direkt:** installera från GitHub. Så får du veta när en ny version finns:
+  - i programmet: **Hjälp → Sök efter uppdateringar…**, eller slå på **Sök efter nya versioner automatiskt** under
+    **Inställningar → Utseende** (av från början; BokföraX tittar då en gång om dagen på GitHubs offentliga sida om senaste
+    versionen och skickar inga uppgifter om dig eller bokföringen), eller
+  - på GitHub: **Watch → Custom → Releases** överst på den här sidan, så mejlar GitHub när en ny version kommer.
+
+  Installera sedan den nya filen ovanpå den gamla – bokföringen ligger kvar.
+- **Har du Store-versionen:** den uppdateras av sig själv när Microsoft har godkänt versionen. Installera inte GitHub-versionen
+  ovanpå den – de två versionerna sparar bokföringen på olika ställen.
+- **Vilken version du har** står längst ned till höger i programmet. Vad som är rättat i varje version står under
+  **[Releases](../../releases)**.
+
 **Krav:** Windows 10 eller 11 (64-bitars). Inget annat behöver installeras.
 
 ### På Mac (från 5.6.0)
