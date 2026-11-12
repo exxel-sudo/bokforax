@@ -67,14 +67,14 @@ Säkerhetskopiorna hamnar i samma mapp, och du kan välja en extra plats, till e
 (från 4.9.0) sparas också daterade, krypterade kopior i din egen Dropbox, Google Drive, OneDrive eller iCloud — själva
 bokföringen ligger kvar på datorn. Avinstallerar du programmet ligger bokföringen kvar.
 
-**Skannad efter virus.** Varje installationsfil skannas med Microsoft Defender innan den läggs upp här (5.14.0: inga
+**Skannad efter virus.** Varje installationsfil skannas med Microsoft Defender innan den läggs upp här (5.15.0: inga
 fynd). 4.2.0 kontrollerades också på VirusTotal (51 av 52 rena, ett maskininlärningsfalsklarm — se nedan).
 
 **Säkerhetsgranskad.** Programmet har granskats av flera oberoende granskningar med fokus på säkerhet (inloggningar,
 filer, nätverk), senast hela programmet i oktober 2026. Alla allvarliga och medelallvarliga fynd är rättade. Hittar du en brist:
 rapportera privat enligt [SECURITY.md](SECURITY.md).
 
-**Testat.** Varje version testas automatiskt med över 7 000 tester (moms, bokföring, SIE, filer, säkerhet) innan den
+**Testat.** Varje version testas automatiskt med över 13 000 tester (moms, bokföring, SIE, filer, säkerhet) innan den
 släpps, och startas på riktigt innan installationsfilen byggs.
 
 **Vem står bakom.** BokföraX utvecklas av en privatperson i Sverige, Nader, som själv använder programmet för sin
@@ -88,7 +88,7 @@ varningen inte visas.
 
 **Är filen säker?** Det är förståeligt att vara försiktig med en .exe-fil från nätet. Så här kan du kontrollera den:
 
-- **Antivirus:** installationsfilen för 5.14.0 är skannad med Microsoft Defender (virusdefinitioner 1.463.189.0) utan
+- **Antivirus:** installationsfilen för 5.15.0 är skannad med Microsoft Defender (virusdefinitioner 1.463.255.0) utan
   fynd. Du kan själv högerklicka på filen → **Skanna med Microsoft Defender**.
 - **VirusTotal** (ett 50-tal antivirusprogram på en gång): **51 av 52 hittar ingenting** —
   [se resultatet för 4.2.0](https://www.virustotal.com/gui/file/f5d04367fe20d6c4db36db44d3642eabdf22b3724f14cd68e2bab76f5f8ca04e). Ett enda program (Trapmine) ger en
@@ -98,8 +98,8 @@ varningen inte visas.
   den packar bara upp sina egna installationsfiler. De 100 programfiler som ingår (bland annat Microsofts .NET-filer)
   har 0 träffar. Utvecklarens kommentar om filen finns under
   [Community på VirusTotal](https://www.virustotal.com/gui/file/f5d04367fe20d6c4db36db44d3642eabdf22b3724f14cd68e2bab76f5f8ca04e/community).
-- **Att filen är oförändrad:** kör i PowerShell `Get-FileHash .\BokforaX-Setup-5.14.0.exe` — svaret ska vara
-  `E7FE335967FB23064F6D3530B645E57ACD3FEE6B5A95729542BF0D50A658AA85` (står också under Releases).
+- **Att filen är oförändrad:** kör i PowerShell `Get-FileHash .\BokforaX-Setup-5.15.0.exe` — svaret ska vara
+  `A04858DC2DFCE0610BC53D632183D89CE3CE8B0949DDBBAD4069F36CD4B77B8F` (står också under Releases).
 - **Hämta bara härifrån.** BokföraX sprids inte någon annanstans.
 
 **Prova först med ett exempelföretag.** **Hjälp → Prova med exempelföretag…** öppnar det påhittade företaget
@@ -149,7 +149,7 @@ ta från någon dag upp till en vecka. Samma rättning kommer alltså till Store
    utan varning.
 3. Har du bokföringen i Windows: **Arkiv → Flytta bokföringen från en annan dator** i Mac-appen.
 
-**Krav:** macOS 14 eller senare, Apple Silicon eller Intel. Mac App Store kommer senare.
+**Krav:** macOS 14 eller senare, Apple Silicon eller Intel. Appen finns också i **[Mac App Store](https://apps.apple.com/se/app/id6826922405)**.
 
 ### iPhone-appen
 
